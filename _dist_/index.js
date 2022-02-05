@@ -6,6 +6,12 @@
 const baseUrl = "https://platzi-avo.vercel.app";
 const url = "https://platzi-avo.vercel.app/api/avo";
 const appNode = document.querySelector("#app");
+
+appNode.addEventListener("click", (event) => {
+    if(event.target.nodeName === 'H2'){
+    window.alert("Holaaaa");
+    }
+});
 const formatPrice = (price) => {
     const newPrice = new window.Intl.NumberFormat("en-EN",{
         style: "currency",
@@ -33,6 +39,7 @@ window
         const title = document.createElement("h2");
         title.className = "text-lg";
         title.textContent = item.name;
+       
         
         //crear precio
         const price = document.createElement("div");
